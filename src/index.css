@@ -24,12 +24,12 @@ a:hover {
 
 body {
   margin: 0;
-  padding: 0; /* Asegura que no haya espacio adicional */
-  display: block; /* Cambia el comportamiento de flex */
-  width: 100%; /* Asegura que ocupe todo el ancho */
-  min-height: 100vh; /* Define una altura mínima para evitar cortes */
-  background-color: #242424; /* Mantén el fondo oscuro */
-  color: rgba(255, 255, 255, 0.87); /* Mantén el texto claro */
+  padding: 0; 
+  display: block; 
+  width: 100%; 
+  min-height: 100vh; 
+  background-color: #242424; 
+  color: rgba(255, 255, 255, 0.87);
 }
 
 h1 {

@@ -1,21 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './Componentes/NavBar';
 import ItemListContainer from './Componentes/ItemListContainer';
-import viteLogo from '/vite.svg';
-import reactLogo from './assets/react.svg';
-
+import ItemDetailContainer from './Componentes/ItemDetailContainer';
+import NotFound from './Componentes/NotFound';
+import './App.css';
 
 function App() {
   return (
-    <div className="App">
-      <NavBar />
-      <main className="main-content">
-        <ItemListContainer greeting="¡Bienvenido a nuestra tienda en línea!" />
-      </main>
-      <footer className="footer">
-        <p>2024&copy;Bruno Chiodelli.</p>
-      </footer>
-    </div>
+    <Router>
+      <div className="App">
+        <NavBar />
+        <Routes>
+          <Route path="/" element={<ItemListContainer />} />
+          <Route path="/category/:categoryId" element={<ItemListContainer />} />
+          <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

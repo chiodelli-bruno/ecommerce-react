@@ -1,24 +1,29 @@
 import React from 'react';
-import CartWidget from './CartWidget';
+import { Link } from 'react-router-dom';
 import './NavBar.css';
 
 const NavBar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div className="navbar-logo">
-          <svg className="logo-icon" viewBox="0 0 24 24" width="24" height="24">
-            <path fill="currentColor" d="M20 6h-3V4c0-1.1-.9-2-2-2H9c-1.1 0-2 .9-2 2v2H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm-11-2h6v2H9V4zm11 16H4V8h16v12z"/>
-          </svg>
-          <span className="logo-text">Mi Tienda</span>
-        </div>
-        <ul className="navbar-menu">
-          <li><a href="/">Inicio</a></li>
-          <li><a href="/productos">Productos</a></li>
-          <li><a href="/ofertas">Ofertas</a></li>
-          <li><a href="/contacto">Contacto</a></li>
+        <Link to="/" className="navbar-brand">Mi E-commerce</Link>
+        <ul className="navbar-nav">
+          <li className="nav-item">
+            <Link to="/" className="nav-link">Inicio</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/category/electronics" className="nav-link">Electrónica</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/category/clothing" className="nav-link">Ropa</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/category/books" className="nav-link">Libros</Link>
+          </li>
+          <li className="nav-item">
+            <Link to="/cart" className="nav-link">Carrito</Link>
+          </li>
         </ul>
-        <CartWidget />
       </div>
     </nav>
   );
