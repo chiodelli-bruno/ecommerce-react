@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "379596063005",
+    "project_id": "ecommerce-react-67b17",
+    "storage_bucket": "ecommerce-react-67b17.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:379596063005:android:84646e8db4840984a021f4",
+        "android_client_info": {
+          "package_name": "com.webbex.chiodelli"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBGat-pHd1y6msm574NPXdrF7BhTaWHkCQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

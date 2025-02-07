@@ -1,0 +1,150 @@
+{
+    "products": [
+      {
+        "id": "1",
+        "name": "iPhone 1333 Pro",
+        "description": "Smartphone de última generación con cámara triple y pantalla Super Retina XDR",
+        "price": 999.99,
+        "category": "smartphones",
+        "stock": 50,
+        "image": "https://www.freepik.com/free-psd/modern-smartphone-displays-stunning-desert-landscape-image-featuring-rolling-sand-dunes-clear-sky-perfect-mobile-wallpaper_410857616.htm#fromView=search&page=1&position=2&uuid=cca88090-4290-4716-803d-ba415c5faea1&query=iphone13"
+      },
+      {
+        "id": "2",
+        "name": "Samsung Galaxy S21",
+        "description": "Potente smartphone Android con cámara de alta resolución y 5G",
+        "price": 799.99,
+        "category": "smartphones",
+        "stock": 75,
+        "image": "https://example.com/galaxys21.jpg"
+      },
+      {
+        "id": "3",
+        "name": "MacBook Pro 14\"",
+        "description": "Laptop profesional con chip M1 Pro y pantalla Liquid Retina XDR",
+        "price": 1999.99,
+        "category": "laptops",
+        "stock": 30,
+        "image": "https://example.com/macbookpro14.jpg"
+      },
+      {
+        "id": "4",
+        "name": "Dell XPS 15",
+        "description": "Laptop potente con pantalla InfinityEdge y gráficos NVIDIA",
+        "price": 1599.99,
+        "category": "laptops",
+        "stock": 40,
+        "image": "https://example.com/dellxps15.jpg"
+      },
+      {
+        "id": "5",
+        "name": "Chanel N°5",
+        "description": "Icónica fragancia floral-aldehídica para mujer",
+        "price": 135.0,
+        "category": "fragrances",
+        "stock": 100,
+        "image": "https://example.com/chaneln5.jpg"
+      },
+      {
+        "id": "6",
+        "name": "Dior Sauvage",
+        "description": "Fragancia masculina fresca y amaderada",
+        "price": 95.0,
+        "category": "fragrances",
+        "stock": 80,
+        "image": "https://example.com/diorsauvage.jpg"
+      },
+      {
+        "id": "7",
+        "name": "Jarrón de cerámica artesanal",
+        "description": "Jarrón decorativo hecho a mano con diseño único",
+        "price": 79.99,
+        "category": "home-decoration",
+        "stock": 25,
+        "image": "https://example.com/jarron.jpg"
+      },
+      {
+        "id": "8",
+        "name": "Set de 3 cuadros abstractos",
+        "description": "Tríptico de cuadros abstractos en tonos azules y dorados",
+        "price": 129.99,
+        "category": "home-decoration",
+        "stock": 15,
+        "image": "https://example.com/cuadros.jpg"
+      },
+      {
+        "id": "9",
+        "name": "Vestido de cóctel",
+        "description": "Elegante vestido negro con escote halter",
+        "price": 89.99,
+        "category": "womens-clothes",
+        "stock": 30,
+        "image": "https://example.com/vestidococtel.jpg"
+      },
+      {
+        "id": "10",
+        "name": "Blusa de seda",
+        "description": "Blusa ligera de seda en tono pastel",
+        "price": 69.99,
+        "category": "womens-clothes",
+        "stock": 40,
+        "image": "https://example.com/blusaseda.jpg"
+      },
+      {
+        "id": "11",
+        "name": "Traje de dos piezas",
+        "description": "Traje formal para hombre en color azul marino",
+        "price": 299.99,
+        "category": "mens-clothes",
+        "stock": 20,
+        "image": "https://example.com/traje.jpg"
+      },
+      {
+        "id": "12",
+        "name": "Camisa Oxford",
+        "description": "Camisa clásica de algodón para hombre en blanco",
+        "price": 59.99,
+        "category": "mens-clothes",
+        "stock": 50,
+        "image": "https://example.com/camisaoxford.jpg"
+      },
+      {
+        "id": "13",
+        "name": "Gafas de sol Ray-Ban Aviator",
+        "description": "Clásicas gafas de sol estilo aviador con lentes polarizadas",
+        "price": 154.99,
+        "category": "sunglasses",
+        "stock": 60,
+        "image": "https://example.com/rayban-aviator.jpg"
+      },
+      {
+        "id": "14",
+        "name": "Gafas de sol Oakley Holbrook",
+        "description": "Gafas de sol deportivas con montura de acetato",
+        "price": 126.0,
+        "category": "sunglasses",
+        "stock": 45,
+        "image": "https://example.com/oakley-holbrook.jpg"
+      },
+      {
+        "id": "15",
+        "name": "Lámpara de pie moderna",
+        "description": "Lámpara de pie con base de mármol y pantalla ajustable",
+        "price": 189.99,
+        "category": "lighting",
+        "stock": 25,
+        "image": "https://example.com/lampara-pie.jpg"
+      },
+      {
+        "id": "16",
+        "name": "Tira de luces LED inteligentes",
+        "description": "Tira de luces LED de 5 metros con control por aplicación",
+        "price": 49.99,
+        "category": "lighting",
+        "stock": 100,
+        "image": "https://example.com/luces-led.jpg"
+      }
+    ]
+  }
+  
+  
