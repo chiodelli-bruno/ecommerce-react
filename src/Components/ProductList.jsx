@@ -7,7 +7,7 @@ const ProductList = () => {
   return (
     <div className="product-list">
       <h2>Productos en la categoría: {categoryId}</h2>
-      {/* Aquí irá la lista de productos */}
+      {}
     </div>
   );
 };
