@@ -3,8 +3,8 @@ import { useCart } from '../context/CartContex'
 import './CartWidget.css';
 
 const CartWidget = () => {
-  const { getTotalQuantity } = useCart(); // Obtiene la cantidad total de productos en el carrito
-  const totalQuantity = getTotalQuantity(); // Llama a la función para obtener el total
+  const { getTotalQuantity } = useCart(); 
+  const totalQuantity = getTotalQuantity(); 
 
   return (
     <div className="cart-widget">
