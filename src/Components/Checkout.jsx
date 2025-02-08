@@ -1,34 +1,34 @@
 import { useState } from "react"
 import { useCart } from "../context/CartContex"
-import { addDoc, collection } from "firebase/firestore"
+import { ref, push, set } from "firebase/database";
 import { db } from "../firebase/config"
 import "./Checkout.css"
 
 const Checkout = () => {
-  const { cart, getTotalPrice, clearCart } = useCart()
-  const [orderComplete, setOrderComplete] = useState(false)
-  const [orderId, setOrderId] = useState(null)
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
+  const { cart, getTotalPrice, clearCart } = useCart();
+  const [orderComplete, setOrderComplete] = useState(false);
+  const [orderId, setOrderId] = useState(null);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState(null);
 
   const [formData, setFormData] = useState({
     name: "",
     email: "",
     phone: "",
     address: "",
-  })
+  });
 
   const handleInputChange = (e) => {
     setFormData({
       ...formData,
       [e.target.name]: e.target.value,
-    })
-  }
+    });
+  };
 
   const handleSubmit = async (e) => {
-    e.preventDefault()
-    setLoading(true)
-    setError(null)
+    e.preventDefault();
+    setLoading(true);
+    setError(null);
 
     try {
       const order = {
@@ -40,20 +40,24 @@ const Checkout = () => {
           quantity: item.quantity,
         })),
         total: getTotalPrice(),
-        date: new Date(),
-      }
+        date: new Date().toISOString(),
+      };
 
-      const docRef = await addDoc(collection(db, "orders"), order)
-      setOrderId(docRef.id)
-      setOrderComplete(true)
-      clearCart()
+      const ordersRef = ref(db, "orders"); // ✅ Referencia en Realtime Database
+      const newOrderRef = push(ordersRef); // ✅ Genera un ID único
+
+      await set(newOrderRef, order); // ✅ Guarda la orden en la DB
+
+      setOrderId(newOrderRef.key); // ✅ Guarda el ID generado
+      setOrderComplete(true);
+      clearCart();
     } catch (error) {
-      console.error("Error al crear la orden:", error)
-      setError("Hubo un error al procesar tu orden. Por favor, intenta de nuevo.")
+      console.error("Error al crear la orden:", error);
+      setError("Hubo un error al procesar tu orden. Por favor, intenta de nuevo.");
     } finally {
-      setLoading(false)
+      setLoading(false);
     }
-  }
+  };
 
   if (loading) {
     return (
@@ -61,7 +65,7 @@ const Checkout = () => {
         <div className="loading-spinner"></div>
         <p>Procesando tu orden...</p>
       </div>
-    )
+    );
   }
 
   if (error) {
@@ -72,7 +76,7 @@ const Checkout = () => {
           Intentar de nuevo
         </button>
       </div>
-    )
+    );
   }
 
   if (orderComplete) {
@@ -84,7 +88,7 @@ const Checkout = () => {
         </p>
         <p>Te enviaremos un correo electrónico con los detalles de tu pedido.</p>
       </div>
-    )
+    );
   }
 
   return (
@@ -114,14 +118,7 @@ const Checkout = () => {
             </div>
             <div className="form-group">
               <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleInputChange}
-                required
-              />
+              <input type="email" id="email" name="email" value={formData.email} onChange={handleInputChange} required />
             </div>
             <div className="form-group">
               <label htmlFor="phone">Teléfono</label>
@@ -129,14 +126,7 @@ const Checkout = () => {
             </div>
             <div className="form-group">
               <label htmlFor="address">Dirección</label>
-              <input
-                type="text"
-                id="address"
-                name="address"
-                value={formData.address}
-                onChange={handleInputChange}
-                required
-              />
+              <input type="text" id="address" name="address" value={formData.address} onChange={handleInputChange} required />
             </div>
             <button type="submit" className="checkout-button">
               Confirmar Compra
@@ -145,8 +135,7 @@ const Checkout = () => {
         </>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default Checkout
-
+export default Checkout;

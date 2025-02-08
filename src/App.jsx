@@ -2,8 +2,8 @@ import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavBar from './Components/NavBar'
 import { CartProvider } from "./context/CartContex"
-import Cart from "./components/Cart"
-import Checkout from "./components/Checkout"
+import Cart from "../src/Components/Cart"
+import Checkout from "../src/Components/Checkout"
 import ItemListContainer from './Components/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer';
 import NotFound from './Components/NotFound';
@@ -30,5 +30,5 @@ function App() {
   )
 }
 
-export default App;
+export default App
 
